@@ -19,7 +19,7 @@ const Index = () => {
 
         <div className="motion-safe-only animate-fade-up space-y-5">
           <p className="mx-auto inline-flex rounded-full border border-primary/15 bg-card/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-ring backdrop-blur">
-            Field force management
+            Remote workforce management
           </p>
           <h1 className="text-balance text-6xl font-extrabold leading-none text-foreground sm:text-7xl md:text-8xl">Coming Soon</h1>
           <p className="mx-auto max-w-2xl text-pretty text-lg leading-8 text-muted-foreground sm:text-xl">
