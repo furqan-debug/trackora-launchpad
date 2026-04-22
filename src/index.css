@@ -38,8 +38,10 @@ All colors MUST be HSL.
     --input: 217 38% 86%;
     --ring: 225 62% 54%;
 
-    --gradient-page: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(217 82% 93%) 42%, hsl(223 86% 88%) 100%);
-    --shadow-soft: 0 16px 44px -26px hsl(var(--primary) / 0.45);
+    --gradient-page: radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.18) 0%, transparent 34%), linear-gradient(145deg, hsl(var(--background)) 0%, hsl(217 82% 94%) 48%, hsl(222 82% 90%) 100%);
+    --gradient-panel: linear-gradient(180deg, hsl(var(--card) / 0.9), hsl(var(--card) / 0.62));
+    --shadow-soft: 0 24px 70px -38px hsl(var(--primary) / 0.55);
+    --shadow-ring: 0 0 0 1px hsl(var(--primary) / 0.09), inset 0 1px 0 hsl(var(--card) / 0.9);
 
     --radius: 0.75rem;
 
@@ -88,8 +90,10 @@ All colors MUST be HSL.
     --border: 223 26% 24%;
     --input: 223 26% 24%;
     --ring: 225 70% 62%;
-    --gradient-page: linear-gradient(145deg, hsl(224 37% 10%) 0%, hsl(226 35% 14%) 45%, hsl(228 39% 20%) 100%);
+    --gradient-page: radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.16) 0%, transparent 34%), linear-gradient(145deg, hsl(224 37% 10%) 0%, hsl(226 35% 14%) 45%, hsl(228 39% 20%) 100%);
+    --gradient-panel: linear-gradient(180deg, hsl(var(--card) / 0.86), hsl(var(--card) / 0.58));
     --shadow-soft: 0 16px 44px -26px hsl(var(--primary) / 0.5);
+    --shadow-ring: 0 0 0 1px hsl(var(--primary) / 0.12), inset 0 1px 0 hsl(var(--card) / 0.26);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -119,6 +123,21 @@ All colors MUST be HSL.
 
   .shadow-soft {
     box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-ring {
+    box-shadow: var(--shadow-ring);
+  }
+
+  .bg-gradient-panel {
+    background-image: var(--gradient-panel);
+  }
+
+  .bg-grid-soft {
+    background-image:
+      linear-gradient(to right, hsl(var(--primary) / 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--primary) / 0.08) 1px, transparent 1px);
+    background-size: 44px 44px;
   }
 
   @media (prefers-reduced-motion: reduce) {
